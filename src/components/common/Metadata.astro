@@ -14,9 +14,10 @@ export interface Props extends MetaData {
   dontUseTitleTemplate?: boolean;
 }
 
+// if ignoreTitleTemplate is Fasle, the header will show xxx - AstroWind
 const {
   title,
-  ignoreTitleTemplate = false,
+  ignoreTitleTemplate = true, 
   canonical = String(getCanonical(String(Astro.url.pathname))),
   robots = {},
   description,
